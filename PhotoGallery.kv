@@ -1,0 +1,21 @@
+Display
+
+
+<Display>
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            text: "Will Bosi - Burden of Dreams"
+        Image:
+            id: image
+            source: root.display_image()
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: 1, .2
+            Button:
+                text: "<<<<<<"
+
+            Button:
+                text: ">>>>>>"
+                on_press: root.advance()

@@ -1,0 +1,35 @@
+MainScreen
+
+<MainScreen>
+    BoxLayout:
+        orientation: "vertical"
+        GridLayout:
+            cols: 2
+            TextInput:
+                id: filename
+                hint_text: "Image filename"
+
+            Button:
+                text: "Load Image"
+                on_release: root.render()
+            Button:
+                text: "pointillism"
+                on_release: root.pointillism(filename.text, "pointillism "+filename.text)
+            Button:
+                text: "Inverse"
+                on_release: root.invert(filename.text, "invert "+filename.text)
+            Button:
+                text: "Sepia"
+                on_release: root.sepia(filename.text, "Sepia "+filename.text)
+            Button:
+                text: "Lighten/Darken"
+                on_release: root.lighten_darken(filename.text, "Lighten/darken "+filename.text, 20)
+            Button:
+                text: "Red Filter"
+                on_release: root.red_filter(filename.text, "red_filter "+filename.text)
+            Button:
+                text: "Pixelate"
+        Image:
+            id: image
+            source: root.render()
+            size_hint: 1, 3
