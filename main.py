@@ -76,8 +76,8 @@ class MainScreen(Screen):
                 blue = pixels[x, y][2] + difference
                 pixels[x, y] = (red, green, blue)
 
-        img.save(name)
-        self.ids.image.source = image["Lighten/darken "+self.ids.filename.text]
+        img.save("Lighten_darken download.jfif")
+        self.ids.image.source = "Lighten_darken download.jfif"
 
     def red_filter(self, image, name):
       img = Image.open(image)
@@ -89,7 +89,7 @@ class MainScreen(Screen):
           blue = pixels[x, y][2]
           pixels[x,y] = (red, green, blue)
       img.save(name)
-      self.ids.image.source = image["red_filter " + self.ids.filename.text]
+      self.ids.image.source = "red_filter " + self.ids.filename.text
 
 
 # PhotoGalleryApp().run()

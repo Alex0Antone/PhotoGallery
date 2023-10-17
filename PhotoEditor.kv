@@ -23,7 +23,7 @@ MainScreen
                 on_release: root.sepia(filename.text, "Sepia "+filename.text)
             Button:
                 text: "Lighten/Darken"
-                on_release: root.lighten_darken(filename.text, "Lighten/darken "+filename.text, 20)
+                on_release: root.lighten_darken(filename.text, ("Lighten_darken "+filename.text), -100)
             Button:
                 text: "Red Filter"
                 on_release: root.red_filter(filename.text, "red_filter "+filename.text)
